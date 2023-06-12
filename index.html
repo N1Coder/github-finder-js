@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center bg-slate-200 dark:bg-slate-950 font-noto-sans scale-90 md:scale-100"
+  >
+    <div class="grid w-[42rem] gap-5" id="app">
+      <header class="flex items-center justify-between">
+        <h1
+          class="text-gray-600 dark:text-slate-200 font-semibold text-lg md:text-2xl"
+        >
+          Github User Finder
+        </h1>
+
+        <a
+          class="hs-dark-mode-active:hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+          href="#!"
+          data-hs-theme-click-value="dark"
+        >
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+            />
+          </svg>
+        </a>
+        <a
+          class="hs-dark-mode-active:block hidden hs-dark-mode group items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+          href="#!"
+          data-hs-theme-click-value="light"
+        >
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+            />
+          </svg>
+        </a>
+      </header>
+
+      <!-- INPUT SECTION -->
+      <section>
+        <form class="form-search">
+          <label
+            for="hs-trailing-button-add-on-with-icon-and-button"
+            class="sr-only"
+            >Label</label
+          >
+          <div class="relative flex rounded-md shadow-sm">
+            <input
+              type="text"
+              id="hs-trailing-button-add-on-with-icon-and-button"
+              name="hs-trailing-button-add-on-with-icon-and-button"
+              class="input-search py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-l-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+            />
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4"
+            >
+              <svg
+                class="h-4 w-4 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </div>
+            <button
+              type="submit"
+              class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-tl-none rounded-bl-none rounded-md border border-transparent font-semibold bg-pink-500 text-white hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- DETAIL CARD SECTION -->
+      <section class="card dark:text-slate-200 shadow-lg dark:shadow-none">
+        <div
+          class="card-container flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7] p-7 md:p-9"
+        >
+          <!-- LOADING STATE -->
+          <!-- <div class="hidden animate-pulse gap-4 md:w-[672px]" data-loading>
+            <div class="hidden md:block md:-shrink-0">
+              <span
+                class="w-24 h-24 block bg-gray-200 rounded-full dark:bg-gray-700"
+              ></span>
+            </div>
+
+            <div style="--width-skeleton: 10%" class="w-full">
+              <div class="flex gap-4">
+                <span
+                  class="md:hidden w-12 h-12 block bg-gray-200 rounded-full dark:bg-gray-700 aspect-square"
+                ></span>
+
+                <div class="flex flex-col gap-2 md:gap-3 w-full">
+                  <span
+                    class="inline-block h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                    style="width: calc(var(--width-skeleton) * 7)"
+                  ></span>
+                  <span
+                    class="inline-block h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                    style="width: calc(var(--width-skeleton) * 4)"
+                  ></span>
+                  <span
+                    class="inline-block h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                    style="width: calc(var(--width-skeleton) * 7)"
+                  ></span>
+                </div>
+
+                <span
+                  class="hidden md:inline-block h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                  style="width: calc(var(--width-skeleton) * 5)"
+                ></span>
+              </div>
+
+              <ul class="mt-8 space-y-3 md:space-y-4">
+                <li
+                  class="w-full h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                ></li>
+                <li
+                  class="w-full h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                ></li>
+                <li
+                  class="w-full h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                ></li>
+                <li
+                  class="w-full h-4 md:h-5 bg-gray-200 rounded-md md:rounded-lg dark:bg-gray-700"
+                ></li>
+              </ul>
+            </div>
+          </div> -->
+
+          <div class="flex" data-content-user>
+            <img
+              class="hidden md:inline-block h-[5.5rem] w-[5.5rem] rounded-full ring-2 ring-white dark:ring-gray-800 mr-4"
+              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+              alt="Image Description"
+              data-image-user
+            />
+
+            <article class="w-full flex flex-col gap-4">
+              <!-- USERNAME DETAIL -->
+              <header class="flex gap-1 flex-row w-full">
+                <img
+                  class="inline-block md:hidden h-[5.5rem] w-[5.5rem] rounded-full ring-2 ring-white dark:ring-gray-800 mr-4"
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                  alt="Image Description"
+                  data-image-user
+                />
+
+                <div
+                  class="flex flex-col md:flex-row md:justify-between w-full"
+                >
+                  <h2
+                    class="flex flex-col text-lg lg:text-xl font-semibold"
+                    data-nickname-user
+                  >
+                    Patrick Star
+
+                    <span class="text-sm text-indigo-500" data-username-user>
+                      @patrick
+                    </span>
+                  </h2>
+
+                  <h3 class="text-sm" data-date-created-user>
+                    Joined at Mai 2022
+                  </h3>
+                </div>
+              </header>
+
+              <!-- USER DESCRIPTION DETAIL -->
+              <div data-bio-user class="text-sm my-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Modi, quis. Impedit eos corporis sed ipsam.
+                </p>
+              </div>
+
+              <!-- REPO, FOLLOWERS, FOLLOWING DETAIL -->
+              <div
+                class="flex gap-8 px-6 py-3 bg-slate-200 dark:bg-slate-800 rounded-md"
+              >
+                <div class="flex flex-col w-full">
+                  <p class="tracking-wider">Repos</p>
+                  <span data-repos-user class="font-semibold"> 7 </span>
+                </div>
+
+                <div class="flex flex-col w-full">
+                  <p class="tracking-wider">Followers</p>
+                  <span data-followers-user class="font-semibold"> 19 </span>
+                </div>
+
+                <div class="flex flex-col w-full">
+                  <p class="tracking-wider">Following</p>
+                  <span data-following-user class="font-semibold"> 11 </span>
+                </div>
+              </div>
+
+              <!-- SOCIAL MEDIA -->
+              <ul class="grid grid-cols-2 gap-3">
+                <li>
+                  <p class="flex gap-2 items-center" data-location-user>
+                    <svg
+                      class="h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <circle cx="256" cy="192" r="32" fill="currentColor" />
+                      <path
+                        fill="currentColor"
+                        d="M256 32c-88.22 0-160 68.65-160 153c0 40.17 18.31 93.59 54.42 158.78c29 52.34 62.55 99.67 80 123.22a31.75 31.75 0 0 0 51.22 0c17.42-23.55 51-70.88 80-123.22C397.69 278.61 416 225.19 416 185c0-84.35-71.78-153-160-153Zm0 224a64 64 0 1 1 64-64a64.07 64.07 0 0 1-64 64Z"
+                      />
+                    </svg>
+
+                    <span> Bikini Bottom </span>
+                  </p>
+                </li>
+
+                <li>
+                  <a href="#" class="flex gap-2 items-center" data-github-user>
+                    <svg
+                      class="h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="48"
+                        d="M200.66 352H144a96 96 0 0 1 0-192h55.41m113.18 0H368a96 96 0 0 1 0 192h-56.66m-142.27-96h175.86"
+                      />
+                    </svg>
+
+                    <span> Bikini Bottom </span>
+                  </a>
+                </li>
+
+                <li>
+                  <p class="flex gap-2 items-center" data-twitter-user>
+                    <svg
+                      class="h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M496 109.5a201.8 201.8 0 0 1-56.55 15.3a97.51 97.51 0 0 0 43.33-53.6a197.74 197.74 0 0 1-62.56 23.5A99.14 99.14 0 0 0 348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 0 0 2.54 22.1a280.7 280.7 0 0 1-203-101.3A95.69 95.69 0 0 0 36 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0 1 35.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 0 1-25.94 3.4a94.38 94.38 0 0 1-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0 1 39.5 405.6a203 203 0 0 1-23.5-1.4A278.68 278.68 0 0 0 166.74 448c181.36 0 280.44-147.7 280.44-275.8c0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 0 0 496 109.5Z"
+                      />
+                    </svg>
+
+                    <span> Bikini Bottom </span>
+                  </p>
+                </li>
+
+                <li>
+                  <p href="#" class="flex gap-2 items-center" data-company-user>
+                    <svg
+                      class="h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M432 176H320V64a48 48 0 0 0-48-48H80a48 48 0 0 0-48 48v416a16 16 0 0 0 16 16h104a8 8 0 0 0 8-8v-71.55c0-8.61 6.62-16 15.23-16.43A16 16 0 0 1 192 416v72a8 8 0 0 0 8 8h264a16 16 0 0 0 16-16V224a48 48 0 0 0-48-48ZM98.08 431.87a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm80 240a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm80 320a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79Zm0-80a16 16 0 1 1 13.79-13.79a16 16 0 0 1-13.79 13.79ZM444 464H320V208h112a16 16 0 0 1 16 16v236a4 4 0 0 1-4 4Z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M400 400a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm0-80a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm0-80a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-64 160a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm0-80a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm0-80a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"
+                      />
+                    </svg>
+
+                    <span> Bikini Bottom </span>
+                  </p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- <script src="./assets/vendor/preline/dist/preline.js"></script> -->
+    <script src="./helper/darkmodePreline.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

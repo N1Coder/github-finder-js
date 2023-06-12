@@ -1,0 +1,19 @@
+{
+  "name": "github-finder-js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tailwind": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "preline": "^1.8.0"
+  }
+}
